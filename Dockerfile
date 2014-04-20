@@ -1,7 +1,6 @@
 FROM ubuntu
 MAINTAINER Trevor Muñoz <trevor.munoz@gmail.com>
 RUN apt-get update
-RUN apt-add-repository -y ppa:chris-lea/node.js
 RUN apt-get -y update
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install git build-essential libssl-dev libcurl4-openssl-dev autoconf bison libyaml-dev libreadline6 libreadline6-dev zlib1g zlib1g-dev rbenv openjdk-6-jdk solr-jetty nodejs
 RUN echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
