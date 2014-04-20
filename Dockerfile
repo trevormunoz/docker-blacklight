@@ -9,8 +9,9 @@ RUN exec $SHELL
 RUN mkdir -p $HOME/.rbenv/plugins
 RUN git clone https://github.com/sstephenson/ruby-build.git /root/.rbenv/plugins/ruby-build
 RUN ./root/.rbenv/plugins/ruby-build/install.sh
-ENV PATH /root/.rbenv/bin:$PATH
-RUN exec $SHELL
+ENV PATH ~/.rbenv/shims:~/.rbenv/bin:$PATH
+RUN echo 'eval "$(rbenv init -)"' >  ~/.bash_profile
+
 # Until Ruby 2.1.2 w/patched readline6.3 comes out, see: http://stackoverflow.com/a/23155490/1232820
 RUN curl -fsSL https://gist.github.com/mislav/a18b9d7f0dc5b9efc162.txt | rbenv install --patch 2.1.1
 RUN rbenv global 2.1.1
