@@ -16,7 +16,6 @@ RUN echo "gem: --no-ri --no-rdoc" >> ~/.gemrc
 RUN gem install bundler
 RUN rbenv rehash
 RUN gem install rails
-RUN gem install therubyracer
 RUN rbenv rehash
 RUN rails new blacklightapp
 RUN cd $HOME/blacklightapp
