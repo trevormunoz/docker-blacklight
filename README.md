@@ -1,0 +1,1 @@
+This repository contains a recipe for making a Docker container with ruby, rails, blacklight, and solr.
