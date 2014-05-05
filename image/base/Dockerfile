@@ -20,3 +20,4 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y update &&\
     wget http://mirrors.gigenet.com/apache/lucene/solr/4.8.0/solr-4.8.0.tgz &&\
     tar -xzvf solr-4.8.0.tgz && cd solr-4.8.0/example &&\
     java -jar start.jar
+EXPOSE 8983
