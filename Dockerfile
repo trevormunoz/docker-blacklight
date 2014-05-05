@@ -16,7 +16,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y update &&\
     cd / && rm -rf /src/ruby-build && ruby-build 2.0.0-p451 /usr/local &&\
     gem update --system &&\
     gem install bundler &&\
-    cd /src && mkdir solr && cd/src/solr &&\
+    cd /src && mkdir solr && cd /src/solr &&\
     wget http://mirrors.gigenet.com/apache/lucene/solr/4.8.0/solr-4.8.0.tgz &&\
     tar -xzvf solr-4.8.0.tgz && cd solr-4.8.0/example &&\
     java -jar start.jar
